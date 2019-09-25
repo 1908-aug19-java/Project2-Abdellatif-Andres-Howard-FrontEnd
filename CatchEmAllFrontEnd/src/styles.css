@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size:cover; height:100% ; width:100%;
+    background-image:url(
+        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/2bc72d3c-39ce-45f3-a55c-e0903291ace0/d17dpy4-a8d0b94a-0351-4d9b-9636-33cc1842f0d2.jpg/v1/fill/w_600,h_486,q_70,strp/background_art_for_pokemon_by_orangedroplet_d17dpy4-fullview.jpg'
+    );
+    
+  }
