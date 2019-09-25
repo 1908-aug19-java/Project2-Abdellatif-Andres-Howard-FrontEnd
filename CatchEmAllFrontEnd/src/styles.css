@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-.bg{
+.bgsimulation{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

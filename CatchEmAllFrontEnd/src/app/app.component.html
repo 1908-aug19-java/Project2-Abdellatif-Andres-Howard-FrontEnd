@@ -1,5 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="bg">
+<mat-sidenav-container class="bgsimulation">
+  <mat-sidenav #sidenav mode="side" opened="false">
+      Sidenav content
+    </mat-sidenav>
+
+    <mat-sidenav-content >
+
+
   <div style="text-align:center"  class="animated flip">
     <h1 >
       Welcome to {{ title }}!
@@ -30,5 +37,14 @@
   </ul>
 
   <router-outlet></router-outlet>
-  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-</div>
+  
+
+
+  
+    
+      
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
