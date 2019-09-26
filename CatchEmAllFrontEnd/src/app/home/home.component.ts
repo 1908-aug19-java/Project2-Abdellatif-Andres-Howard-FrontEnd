@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class MainComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
- 
   constructor() { }
 
   ngOnInit() {
   }
 
-  animatesigninform="";
+    
+  animatesigninform="animated fadeOut";
   animateloginform="";
-  toogleSideNav=""
+  
 
   signIn(){
     this.animateloginform="animated fadeOut";
@@ -30,6 +29,6 @@ export class MainComponent implements OnInit {
     this.animatesigninform="animated fadeOut";
     
   }
-  
+
 
 }

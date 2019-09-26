@@ -51,6 +51,10 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { SigInComponent } from './sig-in/sig-in.component';
 
 
 
@@ -58,18 +62,16 @@ import {
   declarations: [
     AppComponent,
     LogInComponent,
-    MainComponent
-
+    MainComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent,
+    SigInComponent
 
 
     
   ],
   imports: [
-
-    
-
-
-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

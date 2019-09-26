@@ -11,6 +11,10 @@ import { getMedia } from './methods/getMedia';
 export class AppComponent {
   title = 'CatchEmAllFrontEnd';
 
+  number(){
+    console.log("1");
+    
+  }
   
 
   events: string[] = [];

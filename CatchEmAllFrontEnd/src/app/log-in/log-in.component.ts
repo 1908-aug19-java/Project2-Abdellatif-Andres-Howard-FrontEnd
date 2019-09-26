@@ -13,6 +13,9 @@ export class LogInComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+
 }
 
 export function getInfo(){
