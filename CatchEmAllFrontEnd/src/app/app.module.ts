@@ -52,13 +52,24 @@ import {
   MatTreeModule,
 } from '@angular/material';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
     MainComponent
+
+
+
+    
   ],
   imports: [
+
+    
+
+
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

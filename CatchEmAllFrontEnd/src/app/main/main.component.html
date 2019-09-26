@@ -1,3 +1,30 @@
-<p>
-  main works!
-</p>
+<mat-sidenav-container class="bgsimulation">
+    <mat-sidenav class="bgsimulation" #sidenav mode="side" opened="false" class="sidebar">
+        Sidenav content
+        
+      </mat-sidenav>
+        
+      <mat-sidenav-content >
+  
+    <div class="container">
+      <div style="text-align:center"  class="animated flip">
+        
+        <img src="http://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG10.png">
+        
+        
+      </div>
+    </div>
+    <br><br>
+    
+  
+   
+    
+      
+      <app-log-in ></app-log-in>
+      
+      
+        
+      <p></p>
+      <p><button mat-button (click)="sidenav.toggle()" (click)="getInfo()">sidenav.toggle()</button></p> 
+      </mat-sidenav-content>
+    </mat-sidenav-container>
