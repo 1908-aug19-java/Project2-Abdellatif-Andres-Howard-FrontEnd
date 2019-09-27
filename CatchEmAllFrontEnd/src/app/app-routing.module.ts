@@ -6,6 +6,7 @@ import { ProfileComponent } from './main/profile/profile.component';
 import { PokemonsComponent } from './main/pokemons/pokemons.component';
 import { LogOutComponent } from './main/log-out/log-out.component';
 import { CatchEmAllComponent } from './main/catch-em-all/catch-em-all.component';
+import { TestsComponent } from './main/tests/tests.component';
 
 const routes: Routes = [
   {path: "",pathMatch: "full", redirectTo: "home"},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: "profile", component: ProfileComponent },
   {path: "pokemons", component: PokemonsComponent},
   {path: "catch-em-all",component: CatchEmAllComponent},
-  {path: "log-out", component: LogOutComponent}
+  {path: "log-out", component: LogOutComponent},
+  {path: "tests", component: TestsComponent}
 ];
 
 @NgModule({

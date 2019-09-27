@@ -18,13 +18,14 @@
         <a mat-list-item routerLink="/pokemons"> !Your Pokemons! </a>
         <a mat-list-item routerLink="/catch-em-all"> Catch 'Em All </a>
         <a mat-list-item routerLink="/log-out"> Log Out </a>
+        <a mat-list-item routerLink="/tests">Tests </a>
         
   
       </mat-nav-list>
         
       </mat-sidenav>
         
-      <mat-sidenav-content (click)="sidenav.toggle()">
+      <mat-sidenav-content (click)='sidenav.toggle()'>
          
         <router-outlet></router-outlet>
           

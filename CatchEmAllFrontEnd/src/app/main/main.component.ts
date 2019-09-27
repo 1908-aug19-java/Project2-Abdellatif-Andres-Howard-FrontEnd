@@ -8,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  side="false";
+  
+  display(){
+    console.log("3");
+  }
  
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  
   animatesigninform="";
   animateloginform="";
   toogleSideNav=""
