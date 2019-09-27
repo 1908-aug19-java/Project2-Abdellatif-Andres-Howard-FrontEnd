@@ -1,34 +1,42 @@
 
 <div class={{animateloginform}}>
 
-  <div class="container">
-    <div style="text-align:center"  class="animated flip">
-      <br><br><br><br>
-      <img src="http://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG10.png" width="35%">
-    </div>
-  </div>
-  <br><br>
-      <div class="container" style=" width: 400px;" >
-        <mat-tab-group   style="justify-content: center;" tretch-tabs class="log-in-sign-in">
-            <mat-tab   label="Log In">
-                <app-log-in></app-log-in>
-                <p style="text-align:center; color: gray ">
-                  <button mat-button (click)="logIn()"  >Log in</button>
-                </p>    
-            </mat-tab>
-            <mat-tab label="Sign in"> 
-              <app-sig-in></app-sig-in>
-              <p style="text-align:center; color: gray ">
-                  <button mat-button (click)="signIn()">Sign In</button>
-              </p>
-            </mat-tab>
-            
-        </mat-tab-group>
-      </div>
+  
+  <br><br><br><br>
+      
 
       
 
-   
-  
-  
+   <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="container">
+            <div style="text-align:center"  class="animated flip">
+              <br><br><br><br>
+              <img src="http://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG10.png" width="70%">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="container" style=" width: 400px;" >
+            <mat-tab-group   style="justify-content: center;" tretch-tabs class="log-in-sign-in">
+                <mat-tab   label="Log In">
+                    <app-log-in></app-log-in>
+                    <p style="text-align:center; color: gray ">
+                      <button mat-button (click)="logIn()"  >Log in</button>
+                    </p>    
+                </mat-tab>
+                <mat-tab label="Sign in"> 
+                  <app-sig-in></app-sig-in>
+                  <p style="text-align:center; color: gray ">
+                      <button mat-button (click)="signIn()">Sign In</button>
+                  </p>
+                </mat-tab>
+                
+            </mat-tab-group>
+          </div>
+        </div>
+        
+      </div>
+    </div>
 </div>   

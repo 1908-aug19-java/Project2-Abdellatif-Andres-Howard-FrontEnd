@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getMedia } from './methods/getMedia';
+
  
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent {
 
   number(){
     console.log("1");
-    
+     
   }
   
 
