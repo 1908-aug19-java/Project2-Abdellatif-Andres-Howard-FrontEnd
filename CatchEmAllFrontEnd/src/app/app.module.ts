@@ -10,7 +10,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LogInComponent } from './log-in/log-in.component';
+import { LogInComponent } from './home/log-in/log-in.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -54,7 +54,8 @@ import {
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { SigInComponent } from './sig-in/sig-in.component';
+import { SigInComponent } from './home/sig-in/sig-in.component';
+import { ProfileComponent } from './main/profile/profile.component';
 
 
 
@@ -66,7 +67,8 @@ import { SigInComponent } from './sig-in/sig-in.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    SigInComponent
+    SigInComponent,
+    ProfileComponent
 
 
     
