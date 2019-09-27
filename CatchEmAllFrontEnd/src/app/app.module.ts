@@ -56,6 +56,9 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SigInComponent } from './home/sig-in/sig-in.component';
 import { ProfileComponent } from './main/profile/profile.component';
+import { PokemonsComponent } from './main/pokemons/pokemons.component';
+import { LogOutComponent } from './main/log-out/log-out.component';
+import { CatchEmAllComponent } from './main/catch-em-all/catch-em-all.component';
 
 
 
@@ -68,7 +71,10 @@ import { ProfileComponent } from './main/profile/profile.component';
     HeaderComponent,
     HomeComponent,
     SigInComponent,
-    ProfileComponent
+    ProfileComponent,
+    PokemonsComponent,
+    LogOutComponent,
+    CatchEmAllComponent
 
 
     
