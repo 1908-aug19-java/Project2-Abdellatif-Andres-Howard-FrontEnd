@@ -2,6 +2,7 @@ import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 import {MatSidenavModule } from '@angular/material';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from 'src/app/services/models/Post';
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 
 
 @Component({
@@ -12,19 +13,9 @@ import { Post } from 'src/app/services/models/Post';
 
 export class TestsComponent implements OnInit {
   posts: Post[] = [];
-  
-  @Output() clicklo = new EventEmitter();
-
-  side=1;
-  clickLogin(){
-    this.side++;
-    this.clicklo.emit(this.side);
-
-  }
-
- 
-  constructor(private postService: PostService,
-              private sideNavService: MatSidenavModule) { }
+   constructor(
+     private postService: PostService,
+     private trigerToggle: TrigerTroggleService) { }
   
 
   ngOnInit() {
@@ -32,6 +23,14 @@ export class TestsComponent implements OnInit {
   
   
   
+
+  side="toogle";
+  clickLogin(){
+    
+    this.trigerToggle.newEvent("holi");
+
+  }
+
   
   getAllPosts(){
     this.postService.getPosts()

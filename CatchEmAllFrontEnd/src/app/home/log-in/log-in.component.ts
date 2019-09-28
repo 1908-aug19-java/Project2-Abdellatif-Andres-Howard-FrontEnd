@@ -1,7 +1,7 @@
-import {MatSidenavModule } from '@angular/material';
+
 import { Component, OnInit } from '@angular/core';
-
-
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service'
+ 
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
@@ -9,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private trigerToggle: TrigerTroggleService) { }
 
   ngOnInit() {
   }
 
+  side="toogle";
+  clickLogin(){
+    
+    this.trigerToggle.newEvent("sidenav.open()");
+
+  }
   
 
 

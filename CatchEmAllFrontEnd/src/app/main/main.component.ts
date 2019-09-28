@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrigerTroggleService } from '../services/triger-troggle.service';
 
 
 @Component({
@@ -8,17 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  side="false";
   
-  display(){
-    console.log("3");
-  }
  
-  constructor() { }
-
+  constructor(private trigerToggle: TrigerTroggleService) { }
+  side="false";
   ngOnInit() {
+    this.trigerToggle.events$.forEach(event=>this.side=event);
+    
   }
+
+
+
+
   
+  
+  display(showSide:string):void{
+    console.log("funciona")
+    this.side=showSide;
+    
+  }
   
   animatesigninform="";
   animateloginform="";

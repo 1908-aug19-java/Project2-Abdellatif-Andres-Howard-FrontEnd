@@ -27,15 +27,7 @@ export class HomeComponent implements OnInit {
   
   
 
-  signIn(){
-    
-  }
 
-  logIn(){
-    
-   
-    
-  }
 
 
 }

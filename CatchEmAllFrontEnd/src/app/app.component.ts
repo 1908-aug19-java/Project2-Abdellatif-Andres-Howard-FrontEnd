@@ -11,10 +11,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'CatchEmAllFrontEnd';
 
-  number(){
-    console.log("1");
-     
-  }
+  
   
 
   events: string[] = [];

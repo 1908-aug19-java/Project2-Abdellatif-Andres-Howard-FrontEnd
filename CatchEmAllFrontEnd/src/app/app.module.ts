@@ -63,6 +63,8 @@ import { TestsComponent } from './main/tests/tests.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { TrigerTroggleService } from './services/triger-troggle.service'
+
 
 
 @NgModule({
@@ -89,6 +91,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    
     
 
     A11yModule,
@@ -136,7 +139,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     
 
   ],
-  providers: [],
+  providers: [
+    TrigerTroggleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
