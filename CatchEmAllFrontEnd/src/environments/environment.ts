@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  trainerUrl: 'http://localhost:8081/Project2-Back-End-Spring/users'
+
+
 };
 
 /*

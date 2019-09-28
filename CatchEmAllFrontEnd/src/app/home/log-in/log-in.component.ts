@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { TrigerTroggleService } from 'src/app/services/triger-troggle.service'
+import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
+import { Trainer } from 'src/app/services/models/Trainer';
  
 @Component({
   selector: 'app-log-in',
@@ -8,9 +10,11 @@ import { TrigerTroggleService } from 'src/app/services/triger-troggle.service'
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-
+  tr: Trainer = new Trainer();
   constructor(
-    private trigerToggle: TrigerTroggleService) { }
+    
+    private trigerToggle: TrigerTroggleService,
+    private trPostService: TrainerPostService) { }
 
   ngOnInit() {
   }
@@ -19,7 +23,7 @@ export class LogInComponent implements OnInit {
   clickLogin(){
     
     this.trigerToggle.newEvent("sidenav.open()");
-
+    
   }
   
 
