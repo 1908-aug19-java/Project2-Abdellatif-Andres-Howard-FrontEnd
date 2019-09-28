@@ -64,6 +64,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TrigerTroggleService } from './services/triger-troggle.service'
+import { PokeserviceService } from './services/pokeservice.service';
 
 
 
@@ -140,7 +141,8 @@ import { TrigerTroggleService } from './services/triger-troggle.service'
 
   ],
   providers: [
-    TrigerTroggleService
+    TrigerTroggleService,
+    PokeserviceService
   ],
   bootstrap: [AppComponent]
 })
