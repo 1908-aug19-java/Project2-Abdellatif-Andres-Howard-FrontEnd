@@ -28,8 +28,7 @@ export class PokemonsComponent implements OnInit {
   }
 */ 
   ngOnInit() {
-   let obs = this.http.get('https://pokeapi.co/api/v2/pokemon/');
-   obs.subscribe((response) => console.log(response));
+   
 
   }
 
