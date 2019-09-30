@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  trainerUrl: 'http://localhost:8081/Project2-Back-End-Spring/users'
-
+  trainerUrl: 'http://localhost:8081/users'
 
 };
 

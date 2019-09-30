@@ -4,40 +4,18 @@
           
           <div class="card-body">
             <form>
-
               <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-user"></i></span>
-                </div>
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
-
-              <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Last Name">
-              </div>
-
-
-              <div class="input-group form-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-user"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Email">
-              </div>
-              
-              <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="password">
+                <input [(ngModel)]="tr.firstName" name ="tr.firstName" type="text" class="form-control" placeholder="First Name">
+                <input [(ngModel)]="tr.lastName" name = "tr.lastName" type="text" class="form-control" placeholder="Last Name">
               </div>
               <div class="input-group form-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="confirm-password">
+                <input [(ngModel)]="tr.userName" name ="tr.userName" type="text" class="form-control" placeholder="Username">
+              </div>
+              <div class="input-group form-group">
+                <input [(ngModel)]="tr.password" name="tr.password" type="password" class="form-control" placeholder="password">
+              </div>
+              <div class="input-group form-group">
+                <input type="password" class="form-control" placeholder="confirm-password">
               </div>
               
               <section >
