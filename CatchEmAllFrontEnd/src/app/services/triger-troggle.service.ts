@@ -9,7 +9,7 @@ export class TrigerTroggleService {
   
   constructor() { }
 
-  private _subject=new Subject<any>();
+  private _subject=new Subject<string>();
 
   newEvent(event){
     this._subject.next(event);

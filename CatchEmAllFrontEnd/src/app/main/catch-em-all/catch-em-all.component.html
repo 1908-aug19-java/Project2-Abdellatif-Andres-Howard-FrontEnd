@@ -2,3 +2,24 @@
 <p>
   catch-em-all works!
 </p>
+
+<button (click)='startTimer()'>start</button>
+<p>{{counter}}</p>
+<mat-slider
+class="example-margin"
+[disabled]="disabled"
+[invert]="invert"
+[max]="max"
+[min]="min"
+[step]="step"
+[thumbLabel]="thumbLabel"
+[tickInterval]="tickInterval"
+[(ngModel)]="value"
+[vertical]="vertical">
+</mat-slider>
+
+<img src = "{{response.sprites.front_default}}" >
+<span>{{response.game_indices[0].game_index}}
+  {{response.forms[0].name}}
+  {{response.types[0].type.name}}
+  {{response.moves[1].move.name}}</span>

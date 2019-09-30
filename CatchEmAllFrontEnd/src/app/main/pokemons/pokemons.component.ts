@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokeserviceService } from 'src/app/services/pokeservice.service';
 import { HttpClient } from '@angular/common/http';
 import { PostService } from 'src/app/services/post.service';
-import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
+
 
 @Component({
   selector: 'app-pokemons',
@@ -15,7 +15,7 @@ export class PokemonsComponent implements OnInit {
 
  pokeName: String = "";
  response: any;
- constructor(private trigerToggle: TrigerTroggleService, private http: HttpClient) { 
+ constructor( private http: HttpClient) { 
 
  }
  
@@ -40,6 +40,6 @@ export class PokemonsComponent implements OnInit {
       console.log(response);
     })
 
-    this.trigerToggle.newEvent("made it wiht poke component");
+    
   }
 }
