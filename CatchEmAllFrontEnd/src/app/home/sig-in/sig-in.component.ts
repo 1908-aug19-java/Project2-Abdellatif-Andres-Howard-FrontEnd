@@ -9,12 +9,29 @@ import { Trainer } from 'src/app/services/models/Trainer';
 })
 export class SigInComponent implements OnInit {
   tr: Trainer = new Trainer();
+  
   constructor(private trPostService: TrainerPostService) { }
 
   ngOnInit() {
   }
+
+  confirm="";
+
+ 
+
   signIn(){
-    this.trPostService.saveTrainer(this.tr).subscribe;
+    if(this.confirm===this.tr.password){
+
+      this.tr.starterPokemon="";
+      this.tr.trainerId=0;
+      this.tr.pokelist=null;
+      console.log(this.tr);
+      this.trPostService.saveTrainer(this.tr).subscribe();
+      this.tr=new Trainer();
+      this.confirm="";
+  
+    }
+    
   }
 
 

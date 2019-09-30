@@ -16,11 +16,12 @@ export class TrainerPostService {
 
   saveTrainer(tr: Trainer): Observable<Object>{
     const payload = JSON.stringify(tr);
+    console.log(payload);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
-    }
+    };
     return this.http.post(this.url,payload,httpOptions);
   }
 

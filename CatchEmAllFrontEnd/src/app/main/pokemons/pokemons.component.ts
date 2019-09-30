@@ -31,10 +31,10 @@ export class PokemonsComponent implements OnInit {
    
 
   }
-
+  pokename="";
   slide="toogle";
   search(){
-    let obs =this.http.get('https://pokeapi.co/api/v2/pokemon/' + this.pokeName)
+    let obs =this.http.get('https://pokeapi.co/api/v2/pokemon/' + this.pokeName.toLocaleLowerCase())
     obs.subscribe((response) =>{
       this.response = response;
       console.log(response);
