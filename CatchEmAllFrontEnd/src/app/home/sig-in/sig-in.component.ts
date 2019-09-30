@@ -15,12 +15,23 @@ export class SigInComponent implements OnInit {
   ngOnInit() {
   }
 
+  confirm="";
+
+ 
+
   signIn(){
-    this.tr.starterPokemon="";
-    this.tr.trainerId=0;
-    this.tr.pokelist=null;
-    console.log(this.tr);
-    this.trPostService.saveTrainer(this.tr).subscribe();
+    if(this.confirm===this.tr.password){
+
+      this.tr.starterPokemon="";
+      this.tr.trainerId=0;
+      this.tr.pokelist=null;
+      console.log(this.tr);
+      this.trPostService.saveTrainer(this.tr).subscribe();
+      this.tr=new Trainer();
+      this.confirm="";
+  
+    }
+    
   }
 
 
