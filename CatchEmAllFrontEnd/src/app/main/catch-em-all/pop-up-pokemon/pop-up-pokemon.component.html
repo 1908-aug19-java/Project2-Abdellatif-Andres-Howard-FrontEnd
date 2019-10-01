@@ -1,0 +1,15 @@
+
+<h1 mat-dialog-title>You have found {{data.name}} </h1>
+<span>{{data.id}}
+    {{data.name}}
+    {{data.type}}
+    {{data.move}}</span>
+    <img src="{{data.url}}" >
+<div mat-dialog-content>
+  
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button  cdkFocusInitial>!!Catch It!!</button>
+</div>

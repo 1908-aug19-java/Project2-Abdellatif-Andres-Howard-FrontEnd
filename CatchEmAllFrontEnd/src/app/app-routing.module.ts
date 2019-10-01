@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: "catch-em-all",component: CatchEmAllComponent},
   {path: "log-out", component: LogOutComponent},
   {path: "tests", component: TestsComponent}
+  
 ];
 
 @NgModule({

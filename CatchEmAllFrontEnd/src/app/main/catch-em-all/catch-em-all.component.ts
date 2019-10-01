@@ -1,7 +1,11 @@
-import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Component, OnInit, OnDestroy, NgModule  } from '@angular/core';
 import { PokemonPostService } from 'src/app/services/pokemon/pokemon-post.service'; 
 import { Pokemon } from 'src/app/services/models/Pokemon';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material';
+import { PopUpPokemonComponent } from './pop-up-pokemon/pop-up-pokemon.component';
+
+
 
 
 @Component({
@@ -14,22 +18,24 @@ export class CatchEmAllComponent implements OnInit {
   value=1;
   time=0;
   constructor(
+    
     private http: HttpClient,
-    private pkPostService: PokemonPostService) { 
+    private pkPostService: PokemonPostService,
+    public dialog: MatDialog) { 
     }
 
 
   ngOnInit() {
 
-    if(this.counter===3000){
+    if(this.counter>=10000+this.value){
       
       this.generateRandom();
     }
   }
+
   generateRandom(){
     var n=0;
-    n=Math.floor(Math.random() * 805) + 1 ;
-    console.log(n);
+    n=Math.floor(Math.random() * 700) + 1 ;
     return n;
   
   }
@@ -47,23 +53,20 @@ export class CatchEmAllComponent implements OnInit {
       let startTime = Date.now() - (this.counter || 0);
       this.timerRef = setInterval(() => {
         this.counter = Date.now() - startTime;
-        if(this.counter>=this.value*100){
+        if(this.counter>=this.value*100+1000){
 
           this.generateRandom();
           this.search();
           this.counter = undefined;
           startTime = Date.now() - (this.counter || 0);
+          this.openDialog();
         }
       });
     } else {
       this.startText = "Resume";
       clearInterval(this.timerRef);
     }
-    function hi(){}
-    ()=>{
-      console.log()
-    }
-
+   
 
   }
 
@@ -80,27 +83,56 @@ export class CatchEmAllComponent implements OnInit {
 
     console.log(this.pk)
     this.pkPostService.savePokemon(this.pk).subscribe();
-
-
-  
-
   }
   
 
   response: any;
-  pokename="";
-  slide="toogle";
+  id="";
+  name="";
+  type="";
+  move="";
+  url="";
+  
   search(){
+
     let obs =this.http.get('https://pokeapi.co/api/v2/pokemon/' + this.generateRandom());
+
     obs.subscribe((response) =>{
       this.response = response;
-      console.log(response);
+      console.log(response);           
     })
+    
+    this.id=this.response.game_indices[0].game_index;
+    this.name = this.response.forms[0].name;
+    this.type = this.response.types[0].type.name;
+    this.move = this.response.moves[1].move.name;
+    this.url = this.response.sprites.front_default;
+      
+    
 
     
   }
-  
 
+  
+  
+  openDialog(): void {
+    this.startTimer();
+    const dialogRef = this.dialog.open(PopUpPokemonComponent, {
+      width: '250px',
+      data: {
+        id: this.id,
+        name: this.name,
+        type: this.type,
+        move: this.move,
+        url: this.url
+        }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.startTimer();
+      console.log('The dialog was closed');
+     
+    });
+  }
 }
 
 

@@ -42,4 +42,5 @@ export class PokemonsComponent implements OnInit {
 
     
   }
+  
 }

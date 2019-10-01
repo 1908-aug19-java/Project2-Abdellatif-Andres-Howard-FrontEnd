@@ -65,6 +65,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TrigerTroggleService } from './services/triger-troggle.service'
 import { PokeserviceService } from './services/pokeservice.service';
+import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up-pokemon.component';
 
 
 
@@ -81,7 +82,8 @@ import { PokeserviceService } from './services/pokeservice.service';
     PokemonsComponent,
     LogOutComponent,
     CatchEmAllComponent,
-    TestsComponent
+    TestsComponent,
+    PopUpPokemonComponent
 
 
     
@@ -139,6 +141,9 @@ import { PokeserviceService } from './services/pokeservice.service';
     ScrollingModule,
     
 
+  ],
+  entryComponents:[
+    PopUpPokemonComponent
   ],
   providers: [
     TrigerTroggleService,
