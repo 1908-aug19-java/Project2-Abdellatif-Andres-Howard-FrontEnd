@@ -2,8 +2,8 @@
 
 <div>
   
-  <kbd>Pokemon Name: </kbd><input type="text" [(ngModel)]= "pokeName">
-  <button (click) = "search()">Search</button>
+  <kbd>Pokemon Name: </kbd><input type="text" (keyup.enter)="search()" [(ngModel)]= "pokeName">
+  <button (click) = "search()" >Search</button>
 
   <div id = "block_container">
     <div id="bloc1">

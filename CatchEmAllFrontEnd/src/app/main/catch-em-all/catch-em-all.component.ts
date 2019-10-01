@@ -118,7 +118,7 @@ export class CatchEmAllComponent implements OnInit {
   openDialog(): void {
     this.startTimer();
     const dialogRef = this.dialog.open(PopUpPokemonComponent, {
-      width: '250px',
+      width: '400px',
       data: {
         id: this.id,
         name: this.name,
