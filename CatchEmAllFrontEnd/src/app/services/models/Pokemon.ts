@@ -1,11 +1,11 @@
 export class Pokemon{
 
-    pokemonId: number;
     userId: number;
+    pokemonId: number;    
     pokemonName: string;
     pokemonNickName: string;
     type:string;
-    move:string;
+    move:string; 
 
 
 

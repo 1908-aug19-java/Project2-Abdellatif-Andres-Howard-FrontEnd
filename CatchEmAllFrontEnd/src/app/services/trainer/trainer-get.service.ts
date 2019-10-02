@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Trainer } from '../models/Trainer';
-import { ɵangular_packages_platform_browser_dynamic_platform_browser_dynamic_a } from '@angular/platform-browser-dynamic';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,13 @@ import { ɵangular_packages_platform_browser_dynamic_platform_browser_dynamic_a 
 export class TrainerGetService {
 
 
-  url: string = 'localhost:8081/';//Url back end
+  url: string = environment.trainerUrl;
   constructor(private http: HttpClient) { }
 
-  getTrainerById(id: number): Promise<Trainer>{
-    console.log('Get Trainer By Id:  '+id);
-    return this.http.get<Trainer>(this.url+"/"+id).toPromise();
+  getTrainerById(id: number): Observable<Trainer>{
+    console.log('Get Trainer By Id:  '+id+
+    this.url+"/"+id);
+    return this.http.get<Trainer>(this.url+"/"+id);
   }
 
   //getAuthorizationUsernamePassword( userrnamePassword : string ): Promise<Trainer>{

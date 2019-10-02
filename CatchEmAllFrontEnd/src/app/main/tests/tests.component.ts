@@ -13,6 +13,7 @@ import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 
 export class TestsComponent implements OnInit {
   posts: Post[] = [];
+  p=null;
    constructor(
      private postService: PostService,
      private trigerToggle: TrigerTroggleService) { }
@@ -38,6 +39,13 @@ export class TestsComponent implements OnInit {
         this.posts = allPosts;
       });
 
+  }
+  getUser_1(){
+    this.postService.getPostById(5).subscribe(
+      (user)=>{
+        this.p = user;
+      }
+    );
   }
 
 }
