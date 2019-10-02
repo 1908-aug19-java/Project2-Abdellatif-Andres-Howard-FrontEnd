@@ -1,58 +1,69 @@
-<br><br><br><br>
+<br>
+<br>
+<br>
 
+<body style ="background-image:url(https://lh3.googleusercontent.com/xAXFLaSa7HHVrtN80752F74l-20K16P1vtwLX5C4qZ5ApnDQ85oIsP3IKwaSdvP_hMQ0fKgEdDAhzBhoHg61jikSU6B5PmPfU-99HWeIo73vlkA9y8nj=w1175);background-color: beige">
 
-<kbd>Pokemon Name: </kbd><input type="text" [(ngModel)]= "pokeName">
-<button (click) = "search()">Search</button>
+  <div class="container">
+   
 
-<div id = "block_container">
-  <div id="bloc1">
-<table style=" white-space: nowrap; width:auto; ">
-<tr>
-  <th>Type:</th>
-  <th>{{response.types[0].type.name}}</th>
-</tr>
-<tr>
-  <th>Special-Defense:</th>
-  <th>  {{response.stats[1].base_stat}}</th>
-</tr>
-<tr>
-  <th>Special-Attack:</th>
-  <th>{{response.stats[2].base_stat}}</th>
-</tr>
-<tr>
-  <th>Defense:</th>
-  <th>{{response.stats[3].base_stat}}</th>
-</tr>
-<tr>
-  <th>Attack:</th>
-  <th>{{response.stats[4].base_stat}}</th>
-</tr>
-<tr> 
-  <th>HP:</th>
-  <th>{{response.stats[5].base_stat}}</th>
-</tr>
-</table>
+  <kbd>Pokemon Name: </kbd><input type="text" (keyup.enter)="search()" [(ngModel)]= "pokeName">
+  <button (click) = "search()" >Search</button>
+
+  
+ 
+  <img src="https://www.anime-planet.com/images/characters/nurse-joy-15257.jpg?t=1391273107" class="rounded float-right" width="18%" height="35%" >
+<br>
+  <img src = "{{front}}">
+  <img src = "{{back}}">
+  <img src = "{{shinyfront}}">
+  <img src = "{{shinyback}}">
+<br>
+<br>
+<br>
+  <div style="background-color:white;padding:10px;display:table;">
+  <table style="animation: cubic-bezier(5); white-space: nowrap; width:auto; "> 
+  <tr>
+    <th>Type:</th>
+    <th>{{type}}</th>
+  </tr>
+  <tr>
+    <th>Special-Defense:</th>
+    <th>{{specialdefense}}</th>
+  </tr>
+  <tr>
+    <th>Special-Attack:</th>
+    <th>{{specialattack}}</th>
+  </tr>
+  <tr>
+    <th>Defense:</th>
+    <th>{{defense}}</th>
+  </tr>
+  <tr>
+    <th>Attack:</th>
+    <th>{{attack}}</th>
+  </tr>
+  <tr> 
+    <th>HP:</th>
+    <th>{{hp}}</th>
+  </tr>
+  </table>
+  </div>
 </div>
 
-
-<div id ="bloc2">
-<h2><kbd>Pokemon Name:  </kbd>{{response.forms[0].name}}</h2>
-<!--<h2>Pokemon Type: {{response.types[1].name}}</h2>-->
-<h2><kbd>Pokemon Move:  </kbd>{{response.moves[3].move.name}}</h2>
-<h2><kbd>Pokemon Move:  </kbd> {{response.moves[2].move.name}}</h2>
-<h2><kbd>Pokemon Move:  </kbd>{{response.moves[1].move.name}}</h2>
+<div class ="container">
+<br>
+<br>
+  
+  <div style="background-color: lightgreen; padding:10x;"><h2><kbd>Pokemon Name:  </kbd>{{pokename}}</h2></div>
+  <!--<h2>Pokemon Type: {{response.types[1].name}}</h2>-->
+  <div style ="background-color:lightgreen; padding:10x;"><h2><kbd>Pokemon Move:  </kbd>{{move1}}</h2></div>
+  <div style ="background-color:lightgreen; padding:10x;"><h2><kbd>Pokemon Move:  </kbd> {{move2}}</h2></div>
+  <div style="background-color:lightgreen; paddingL10x;"><h2><kbd>Pokemon Move:  </kbd>{{move3}}</h2></div>
+  
 </div>
 
-</div>
-
-
-<img src = "{{response.sprites.front_default}}">
-<img src = "{{response.sprites.back_default}}">
-<img src = "{{response.sprites.front_shiny}}">
-<img src = "{{response.sprites.back_shiny}}">
-
-
-
+<div class = "container">
 <table style ="border: 10px dashed red; padding: 0.5rem;  width:100%; white-space: nowrap; ">
 <tr>
   <th>Name:</th>
@@ -62,21 +73,19 @@
   <th>Move (3)</th>
   <br>
   </tr>
-
- 
-
   <tr>
   
-    <td><kbd> {{response.forms[0].name}}</kbd></td>
+    <td><kbd> {{pokename}}</kbd></td>
 
-    <td><img src = "{{response.sprites.front_default}}" ><img src = "{{response.sprites.back_default}}"></td>
+    <td><img src = "{{front}}" ><img src = "{{back}}"></td>
     
-    <td><kbd> {{response.moves[3].move.name}}</kbd></td>
+    <td><kbd> {{move1}}</kbd></td>
     
-    <td><kbd>{{response.moves[2].move.name}}</kbd></td>
+    <td><kbd>{{move2}}</kbd></td>
     
-    <td><kbd>{{response.moves[1].move.name}}</kbd></td>
+    <td><kbd>{{move3}}</kbd></td>
 </tr>
 </table>
-
+</div>
+</body>
 

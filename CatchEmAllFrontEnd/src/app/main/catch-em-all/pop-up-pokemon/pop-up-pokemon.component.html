@@ -1,0 +1,27 @@
+
+<h1 mat-dialog-title>You have found {{data.name | uppercase}} </h1>
+ 
+<div mat-dialog-content >
+    <div class="row">
+        <div class="col">
+            <img src="{{data.url}}" width="110%">
+        </div>
+        <div class="col" >
+            <span>
+                Type: {{data.type}}<br>
+                Main Move: {{data.move}}</span>
+        </div>
+      </div>
+        
+        
+    
+        <mat-form-field >
+            <input matInput [(ngModel)]="this.nickName"  placeholder="Will have a nickname?">
+          </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="catchPokemon()" cdkFocusInitial>!!Catch It!!</button>
+</div>
+

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  trainerUrl: 'http://localhost:8081/users'
+  trainerUrl: 'http://localhost:8081/users',
+  pokemonUrl: 'http://localhost:8081/pokemons'
 
 };
 
