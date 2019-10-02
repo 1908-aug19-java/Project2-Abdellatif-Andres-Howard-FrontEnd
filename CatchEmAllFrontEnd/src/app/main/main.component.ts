@@ -14,7 +14,13 @@ export class MainComponent implements OnInit {
   constructor(private trigerToggle: TrigerTroggleService) { }
   side="false";
   ngOnInit() {
-    this.trigerToggle.events$.forEach(event=>this.side=event);
+    this.trigerToggle.events$.forEach((event)=>{
+      if(event==="false"||event==="true"){
+        this.side=event;
+      }
+      
+      console.log(event);
+    });
     
   }
 

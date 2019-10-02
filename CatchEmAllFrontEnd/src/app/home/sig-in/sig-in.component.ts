@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
 import { Trainer } from 'src/app/services/models/Trainer';
- 
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
+
+
 @Component({
   selector: 'app-sig-in',
   templateUrl: './sig-in.component.html',
@@ -10,13 +12,15 @@ import { Trainer } from 'src/app/services/models/Trainer';
 export class SigInComponent implements OnInit {
   tr: Trainer = new Trainer();
   
-  constructor(private trPostService: TrainerPostService) { }
+  constructor(private trPostService: TrainerPostService,
+              private triggerToggle: TrigerTroggleService) { }
 
   ngOnInit() {
   }
 
   confirm="";
 
+  position="0";
  
 
   signIn(){
@@ -27,9 +31,10 @@ export class SigInComponent implements OnInit {
       this.tr.pokelist=null;
       console.log(this.tr);
       this.trPostService.saveTrainer(this.tr).subscribe();
+      this.triggerToggle.newEvent(this.position);
       this.tr=new Trainer();
       this.confirm="";
-  
+     
     }
     
   }

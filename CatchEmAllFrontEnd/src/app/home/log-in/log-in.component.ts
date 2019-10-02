@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { TrigerTroggleService } from 'src/app/services/triger-troggle.service'
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
 import { Trainer } from 'src/app/services/models/Trainer';
  
@@ -19,10 +19,10 @@ export class LogInComponent implements OnInit {
   ngOnInit() {
   }
 
-  side="toogle";
+  side=false;
   clickLogin(){
-    
-    this.trigerToggle.newEvent("sidenav.open()");
+    this.side=true;
+    this.trigerToggle.newEvent(this.side);
     
   }
   

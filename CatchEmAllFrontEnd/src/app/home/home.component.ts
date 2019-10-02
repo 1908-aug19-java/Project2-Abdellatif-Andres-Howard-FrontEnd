@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
+
 import {
   trigger,
   state,
@@ -18,11 +20,14 @@ import {
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private triggerToggle:TrigerTroggleService) { }
+  position:string="";
   ngOnInit() {
+    this.triggerToggle.events$.forEach((event)=>{
+      this.position=event;
+      console.log(this.position);
+    });
   }
-
     
   
   
