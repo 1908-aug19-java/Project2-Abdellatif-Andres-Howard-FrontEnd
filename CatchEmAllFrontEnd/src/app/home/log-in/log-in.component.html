@@ -12,7 +12,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                       </div>
-                      <input type="text" class="form-control" placeholder="username">
+                      <input type="text" [(ngModel)]="userName" name="userName" class="form-control" placeholder="username">
                       
                     </div>
     
@@ -20,7 +20,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                       </div>
-                      <input type="password" class="form-control" placeholder="password">
+                      <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="password">
                     </div>
                   </form>
                 </div>
@@ -30,7 +30,7 @@
           
     </div>
     <p style="text-align:center; color: gray ">
-        <button mat-button backgroud="primary" (click)="clickLogin()"  routerLink="/profile" >Log in</button>
+        <button mat-button backgroud="primary" (click)="clickLogin()"   >Log in</button>
     </p> 
 
     

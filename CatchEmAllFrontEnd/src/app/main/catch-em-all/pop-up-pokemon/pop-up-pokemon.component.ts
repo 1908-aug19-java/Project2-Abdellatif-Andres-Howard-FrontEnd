@@ -76,7 +76,7 @@ export class PopUpPokemonComponent implements OnInit {
   
     catchPokemon(){
 
-    this.pk.pokemonId=this.data.id;
+    this.pk.pokemonId=0;
     this.pk.pokemonName=this.data.name;
     this.pk.pokemonNickName=this.nickName;
     this.pk.type=this.data.type;

@@ -4,7 +4,7 @@ import { Pokemon } from 'src/app/services/models/Pokemon';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import { PopUpPokemonComponent } from './pop-up-pokemon/pop-up-pokemon.component';
-
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 
 
 
@@ -18,7 +18,7 @@ export class CatchEmAllComponent implements OnInit {
   value=1;
   time=0;
   constructor(
-    
+    private trigerToggle: TrigerTroggleService,
     private http: HttpClient,
     private pkPostService: PokemonPostService,
     public dialog: MatDialog) { 
@@ -33,6 +33,11 @@ export class CatchEmAllComponent implements OnInit {
     }
   }
 
+  
+    
+    
+    
+  
   generateRandom(){
     var n=0;
     n=Math.floor(Math.random() * 700) + 1 ;
@@ -45,9 +50,12 @@ export class CatchEmAllComponent implements OnInit {
   timerRef;
   running: boolean = false;
   startText = "Start";
-
+  side=true;
   startTimer() {
+    this.side=!this.side;
+    this.trigerToggle.newEvent(this.side);
     this.running = !this.running;
+    
     if (this.running) {
       this.startText = "Stop";
       let startTime = Date.now() - (this.counter || 0);
@@ -77,7 +85,7 @@ export class CatchEmAllComponent implements OnInit {
     this.pk.pokemonName="moltres";
     this.pk.pokemonNickName="Fire Bird";
     this.pk.type="Fire";
-    this.pk.userId=2;
+    this.pk.userId=1;
     this.pk.move="boom shakalaka";
     
 

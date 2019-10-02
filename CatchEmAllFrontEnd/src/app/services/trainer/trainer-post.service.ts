@@ -10,6 +10,7 @@ import { Trainer } from 'src/app/services/models/Trainer';
 export class TrainerPostService {
   
   url: string = environment.trainerUrl;//Url back end
+  loginUrl: string = environment.login;
   constructor(private http: HttpClient) { 
 
   }
@@ -23,6 +24,16 @@ export class TrainerPostService {
       })
     };
     return this.http.post(this.url,payload,httpOptions);
+  }
+  login(tr: Trainer): Observable<Object>{
+    const payload = JSON.stringify(tr);
+    console.log(payload);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post(this.loginUrl,payload,httpOptions);
   }
 
 }

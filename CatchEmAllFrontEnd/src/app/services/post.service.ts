@@ -17,9 +17,9 @@ export class PostService {
     return this.http.get<Post[]>(this.url);
   }
 
-  getPostById(id: number): Promise<Post>{
+  getPostById(id: number): Observable<Post>{
     console.log('getting post by id: '+id);
-    return this.http.get<Post>(this.url+"/"+id).toPromise();
+    return this.http.get<Post>(this.url+"/"+id);
   }
 
 

@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   trainerUrl: 'http://localhost:8081/users',
-  pokemonUrl: 'http://localhost:8081/pokemons'
+  pokemonUrl: 'http://localhost:8081/pokemons',
+  login: 'http://localhost:8081/login'
 
 };
 

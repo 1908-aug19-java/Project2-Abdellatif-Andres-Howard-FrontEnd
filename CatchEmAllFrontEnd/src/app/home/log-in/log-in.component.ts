@@ -1,8 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
-import { TrigerTroggleService } from 'src/app/services/triger-troggle.service'
+import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
 import { Trainer } from 'src/app/services/models/Trainer';
+import { tokenKey } from '@angular/core/src/view';
  
 @Component({
   selector: 'app-log-in',
@@ -10,7 +11,10 @@ import { Trainer } from 'src/app/services/models/Trainer';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  tr: Trainer = new Trainer();
+  tr: Trainer = new Trainer;
+  trresponse: any;
+  userName="";
+  password="";
   constructor(
     
     private trigerToggle: TrigerTroggleService,
@@ -19,13 +23,31 @@ export class LogInComponent implements OnInit {
   ngOnInit() {
   }
 
-  side="toogle";
+  side=false;
   clickLogin(){
+    console.log("fa"+this.userName);
+    this.login();
+    this.side=true;
+    this.trigerToggle.newEvent(this.side);
     
-    this.trigerToggle.newEvent("sidenav.open()");
     
   }
-  
+
+ 
+  login(){
+    this.tr.trainerId=null;
+    this.tr.userName=this.userName;
+    this.tr.password=this.password;
+    this.trPostService.login(this.tr).subscribe(
+      (trainer)=>{
+        this.trresponse = trainer;
+        console.log(this.trresponse.userName);
+      }
+    )
+    
+    
+    
+  }
 
 
 
