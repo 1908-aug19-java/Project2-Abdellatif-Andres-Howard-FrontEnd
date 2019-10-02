@@ -63,9 +63,11 @@ import { TestsComponent } from './main/tests/tests.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+
 import { TrigerTroggleService } from './services/triger-troggle.service'
 import { PokeserviceService } from './services/pokeservice.service';
 import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up-pokemon.component';
+import { FlipToLoginService } from './services/flip-to-login.service';
 
 
 
@@ -146,6 +148,7 @@ import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up
     PopUpPokemonComponent
   ],
   providers: [
+    FlipToLoginService,
     TrigerTroggleService,
     PokeserviceService
   ],

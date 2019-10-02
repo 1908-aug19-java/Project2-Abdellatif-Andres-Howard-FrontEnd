@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
 import { Trainer } from 'src/app/services/models/Trainer';
-import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
+import { FlipToLoginService } from 'src/app/services/flip-to-login.service';
 
 
 @Component({
@@ -13,17 +13,18 @@ export class SigInComponent implements OnInit {
   tr: Trainer = new Trainer();
   
   constructor(private trPostService: TrainerPostService,
-              private triggerToggle: TrigerTroggleService) { }
+              private flipToLogin: FlipToLoginService) { }
 
   ngOnInit() {
   }
 
   confirm="";
 
-  position="1";
+  position="0";
  
 
   signIn(){
+    this.flipToLogin.newEvent(this.position);
     if(this.confirm===this.tr.password){
 
       this.tr.starterPokemon="";
@@ -31,7 +32,7 @@ export class SigInComponent implements OnInit {
       this.tr.pokelist=null;
       console.log(this.tr);
       this.trPostService.saveTrainer(this.tr).subscribe();
-      this.triggerToggle.newEvent(this.position);
+      
       this.tr=new Trainer();
       this.confirm="";
      

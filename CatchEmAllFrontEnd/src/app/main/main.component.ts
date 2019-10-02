@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrigerTroggleService } from '../services/triger-troggle.service';
-
+import { FlipToLoginService } from '../services/flip-to-login.service';
 
 @Component({
   selector: 'app-main',
@@ -11,13 +11,15 @@ export class MainComponent implements OnInit {
 
   
  
-  constructor(private trigerToggle: TrigerTroggleService) { }
+  constructor(
+    private fliptoLogin: FlipToLoginService,
+    private trigerToggle: TrigerTroggleService) { }
   side="false";
   ngOnInit() {
+    
     this.trigerToggle.events$.forEach((event)=>{
-      if(event==="false"||event==="true"){
-        this.side=event;
-      }
+      this.side=event;
+      
       
       console.log(event);
     });
