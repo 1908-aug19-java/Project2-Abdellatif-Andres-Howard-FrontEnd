@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getTrainer_1(){
-    this.tr=this.trGetService.getTrainerById(1).subscribe(
+    this.tr=this.trGetService.getTrainerByUserName("afcabezasq").subscribe(
       (Trainer)=>{
         this.tr = Trainer;
       }

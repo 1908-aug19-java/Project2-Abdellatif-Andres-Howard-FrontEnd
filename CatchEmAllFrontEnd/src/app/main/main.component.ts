@@ -16,7 +16,9 @@ export class MainComponent implements OnInit {
     private trigerToggle: TrigerTroggleService) { }
   side="false";
   ngOnInit() {
-    
+    if(sessionStorage.getItem("user")!=null){
+      this.side="true";
+    }
     this.trigerToggle.events$.forEach((event)=>{
       this.side=event;
       

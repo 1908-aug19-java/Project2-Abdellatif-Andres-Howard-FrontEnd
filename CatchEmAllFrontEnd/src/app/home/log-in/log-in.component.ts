@@ -28,22 +28,25 @@ export class LogInComponent implements OnInit {
     console.log("fa"+this.userName);
     this.login();
     this.side=true;
-    this.trigerToggle.newEvent(this.side);
+    
     
     
   }
 
- 
+  
   login(){
     this.tr.trainerId=null;
     this.tr.userName=this.userName;
     this.tr.password=this.password;
     this.trPostService.login(this.tr).subscribe(
       (trainer)=>{
+        this.trigerToggle.newEvent(this.side);
         this.trresponse = trainer;
         console.log(this.trresponse.userName);
       }
     )
+
+    sessionStorage.setItem("user",JSON.stringify(this.tr.userName));
     
     
     
