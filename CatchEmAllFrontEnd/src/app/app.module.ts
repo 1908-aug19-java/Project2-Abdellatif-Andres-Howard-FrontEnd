@@ -67,6 +67,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TrigerTroggleService } from './services/triger-troggle.service'
 import { PokeserviceService } from './services/pokeservice.service';
 import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up-pokemon.component';
+import { ItemsComponent } from './main/items/items.component';
 import { FlipToLoginService } from './services/flip-to-login.service';
 
 
@@ -85,7 +86,8 @@ import { FlipToLoginService } from './services/flip-to-login.service';
     LogOutComponent,
     CatchEmAllComponent,
     TestsComponent,
-    PopUpPokemonComponent
+    PopUpPokemonComponent,
+    ItemsComponent
 
 
     
