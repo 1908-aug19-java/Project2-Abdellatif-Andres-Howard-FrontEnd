@@ -1,15 +1,29 @@
 <br><br><br><br><br>
 
-<button (click)='startTimer()'>{{startText}}</button>
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <button class="btn-xlarge" (click)='startTimer()'>{{startText}}</button>
+        <mat-slider vertical="true"  [(ngModel)]="value"></mat-slider>
+    </div>
+    <div class="col">
+        <img src =  "{{url}}" width="100%">
+    </div>
+    <div class="col">
 
-<mat-slider  [(ngModel)]="value"></mat-slider>
+      <kbd>{{name}}</kbd><br>
+      <kbd>{{type}}</kbd><br>
+      <kbd>{{move}}</kbd>
 
-<img src =  "{{url}}" >
+    </div>
 
-<span>{{id}}
-  {{name}}
-  {{type}}
-  {{move}}</span>
+  </div>
+</div>
+
+
+
+
+
 
  
   

@@ -7,10 +7,15 @@
 <br><br>
 
 <div class="container" style="width: 800">
+
   <div class="row">
+
       <div class="col">
+
           <div class="container">
+
               <div class="card" style="width: 18rem;">
+
                 <div class="card-body">
                   <h5 class="card-title"> {{tr.firstName}} </h5>
                   <h6 class="card-subtitle mb-2 text-muted">!Your journey begins!</h6>
@@ -23,33 +28,75 @@
       </div>
       <div class="col">
           <mat-tab-group  [selectedIndex]="position"  style="justify-content: center;" tretch-tabs class="log-in-sign-in">
-              <mat-tab (click)='getPokemonsTrainer()'   label="Your Pokemons">
+            <mat-tab label="Your Info">
+                <table class="table table-hover" >
+                    <tr><th>First Name:  </th><th>{{tr.firstName}} </th></tr>
+                    <tr><th>Last Name:  </th><th>{{tr.lastName}} </th></tr>
+                    <tr><th>userName:  </th><th>{{tr.userName}} </th></tr>
+                    
+                  </table>
+
+            </mat-tab>  
+            <mat-tab (click)='getPokemonsTrainer()' class="pokemons"   label="Your Pokemons">
                 <table class="table table-hover" *ngIf='pkns.length>0' >
                   <tr>
-                    <th>Id</th>
+                    <th>Name</th>
                     <th>Nickname</th>
+                    <th>Type</th>
+                    <th>Move</th>
                   </tr>
-                  <tr *ngFor='let p of pkns' >
+                  <tr *ngFor='let p of pkns'   >
                       
-                    <td> {{p.pokemonName}} </td>
-                    <td> {{p.pokemonNickName}} </td>
-                    
-                    
+                    <td><button type="button" (click)="search(p.pokemonName,p.pokemonNickName)" class="btn btn-dark">{{p.pokemonName}}</button>  </td>
+                    <td> <kbd>{{p.pokemonNickName}}</kbd> </td>
+                    <td> <kbd>{{p.type}}</kbd> </td>
+                    <td> <kbd>{{p.move}}</kbd></td>
+                                       
                   </tr>
-                  <td><img src={{url}}></td>
+                  <td></td>
                 </table>
                  
                      
               </mat-tab>
               <mat-tab label="Update Info"> 
                
+                <app-update-info></app-update-info>
                 
               </mat-tab>
               
           </mat-tab-group>
+          <br><br>
+
+
+          <div class="container pagination-centered" >
+              <div class="card text-center" style="width: 20rem; background: rgba(45, 47, 179, 0.2);">
+                  <div class="card-header">
+                    <kbd>{{nickName}}</kbd>
+                  </div>
+                <div class="card-body">
+                  
+                  <div class="row">
+                      <div class="col">
+                          <img src={{url}} style="max-width: 100px">      
+                      </div>
+                      <div class="col" >
+                        
+                        <kbd>{{name}}</kbd><br>
+                        <kbd>{{type}}</kbd>  <br>
+                        <kbd>{{move}}</kbd>  <br>
+                          
+                      </div>
+                  </div>
+                  
+                  
+                </div>
+                </div>
+              </div>
+            </div>
         
       </div>
-  </div>
+    </div>
   
 
-</div>
+ 
+

@@ -96,9 +96,9 @@ export class CatchEmAllComponent implements OnInit {
 
   response: any;
   id="";
-  name="";
-  type="";
-  move="";
+  name="Name";
+  type="Type";
+  move="Move";
   url="";
   
   search(){

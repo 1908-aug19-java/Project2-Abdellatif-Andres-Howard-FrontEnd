@@ -2,13 +2,20 @@
 
 @media (min-width: 1200px) {
     .container{
+        
         max-width: 970px;
+
+        
     }
 }
 mat-tab-group{
 
     background: rgba(221, 225, 233, 0.7);
     width: 500px;
+    height: 215px;
     
     
 }
+
+
+
