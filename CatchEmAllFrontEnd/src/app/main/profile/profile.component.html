@@ -1,35 +1,55 @@
 <br><br><br><br>
-<p>
-  profile works!
-</p>
-<button (click)='getTrainer_1()'  (click)='getPokemonsTrainer_1()'>catch</button>
-<p>
-  {{tr.trainerId}}
-</p>
-<p>
-  {{tr.firstName}}
-</p>
-<p>
-  {{tr.lastName}}
-</p>
-<p>
-  {{tr.userName}}
-</p>
-<p>
-  {{tr.starterPokemon}}
-</p>
 
-<div class="container">
-<table class="table table-hover" *ngIf='pkns.length>0' >
-  <tr>
-    <th>Id</th>
-    <th>Nickname</th>
-  </tr>
-  <tr *ngFor='let p of pkns' >
-    <td> {{p.pokemonName}} </td>
-    <td> {{p.pokemonNickName}} </td>
-    
 
-  </tr>
-</table>
+
+
+
+<br><br>
+
+<div class="container" style="width: 800">
+  <div class="row">
+      <div class="col">
+          <div class="container">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"> {{tr.firstName}} </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">!Your journey begins!</h6>
+                  <p class="card-text">Gotta Catch 'Em All</p>
+                  
+                </div>
+              </div>
+            </div>
+        <img src="https://cdn.bulbagarden.net/upload/d/d3/Lets_Go_Pikachu_Eevee_Red.png" width="50%">
+      </div>
+      <div class="col">
+          <mat-tab-group  [selectedIndex]="position"  style="justify-content: center;" tretch-tabs class="log-in-sign-in">
+              <mat-tab (click)='getPokemonsTrainer()'   label="Your Pokemons">
+                <table class="table table-hover" *ngIf='pkns.length>0' >
+                  <tr>
+                    <th>Id</th>
+                    <th>Nickname</th>
+                  </tr>
+                  <tr *ngFor='let p of pkns' >
+                      
+                    <td> {{p.pokemonName}} </td>
+                    <td> {{p.pokemonNickName}} </td>
+                    
+                    
+                  </tr>
+                  <td><img src={{url}}></td>
+                </table>
+                 
+                     
+              </mat-tab>
+              <mat-tab label="Update Info"> 
+               
+                
+              </mat-tab>
+              
+          </mat-tab-group>
+        
+      </div>
+  </div>
+  
+
 </div>

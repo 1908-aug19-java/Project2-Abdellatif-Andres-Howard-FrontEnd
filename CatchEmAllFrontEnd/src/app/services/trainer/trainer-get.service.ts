@@ -13,10 +13,10 @@ export class TrainerGetService {
   url: string = environment.trainerUrl;
   constructor(private http: HttpClient) { }
 
-  getTrainerById(id: number): Observable<Trainer>{
-    console.log('Get Trainer By Id:  '+id+
-    this.url+"/"+id);
-    return this.http.get<Trainer>(this.url+"/"+id);
+  getTrainerByUserName(userName: string): Observable<Trainer>{
+    console.log('Get Trainer By Id:  '+userName+
+    this.url+"/"+userName);
+    return this.http.get<Trainer>(this.url+"/"+userName);
   }
 
   //getAuthorizationUsernamePassword( userrnamePassword : string ): Promise<Trainer>{
