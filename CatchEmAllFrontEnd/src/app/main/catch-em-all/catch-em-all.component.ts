@@ -78,14 +78,14 @@ export class CatchEmAllComponent implements OnInit {
 
   }
 
-
+  
   catchPokemon(){
 
     this.pk.pokemonId=0;
     this.pk.pokemonName="moltres";
     this.pk.pokemonNickName="Fire Bird";
     this.pk.type="Fire";
-    this.pk.userId=1;
+    this.pk.userId=parseInt(sessionStorage.getItem('trainer'));
     this.pk.move="boom shakalaka";
     
 

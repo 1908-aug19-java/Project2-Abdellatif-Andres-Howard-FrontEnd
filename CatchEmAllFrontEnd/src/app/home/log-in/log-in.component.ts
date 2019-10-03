@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { TrigerTroggleService } from 'src/app/services/triger-troggle.service';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
 import { Trainer } from 'src/app/services/models/Trainer';
+import { Router } from '@angular/router';
 import { tokenKey } from '@angular/core/src/view';
  
 @Component({
@@ -10,13 +11,15 @@ import { tokenKey } from '@angular/core/src/view';
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.css']
 })
+
+
 export class LogInComponent implements OnInit {
   tr: Trainer = new Trainer;
   trresponse: any;
   userName="";
   password="";
   constructor(
-    
+    private router: Router,
     private trigerToggle: TrigerTroggleService,
     private trPostService: TrainerPostService) { }
 
@@ -43,10 +46,15 @@ export class LogInComponent implements OnInit {
         this.trigerToggle.newEvent(this.side);
         this.trresponse = trainer;
         console.log(this.trresponse.userName);
+        sessionStorage.setItem('token',this.tr.userName);
+        if(this.trresponse.userName===this.userName){
+          this.router.navigate(['/profile']);
+        }
       }
     )
 
-    sessionStorage.setItem("user",JSON.stringify(this.tr.userName));
+    
+   
     
     
     
