@@ -15,4 +15,4 @@ script:
 
   - ng build --prod
   - npm install sonar-scanner
-  - sonar-scanner -Dsonar.projectKey=1908-aug19-java_Project2-YinYu-Andres-Howard -Dsonar.organization=1908-aug19-java -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONNAR_TOKEN
+  - sonar-scanner -Dsonar.projectKey=1908-aug19-java_Project2-YinYu-Andres-Howard-FrontEnd -Dsonar.organization=1908-aug19-java -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONNAR_TOKEN
