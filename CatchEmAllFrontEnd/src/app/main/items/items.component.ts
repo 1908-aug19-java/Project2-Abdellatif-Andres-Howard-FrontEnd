@@ -54,6 +54,7 @@ quickball="";
     this.one=one;
     
     this.masterball=this.one.sprites.default;
+    
 
   })
   {
@@ -61,7 +62,7 @@ quickball="";
     obs.subscribe((two)=>{
       this.two=two;
       
-      this.ultraball=this.one.sprites.default;
+      this.ultraball=this.two.sprites.default;
   
     })
     {
@@ -69,7 +70,7 @@ quickball="";
       obs.subscribe((three)=>{
         this.three=three;
         
-        this.greatball=this.one.sprites.default;
+        this.greatball=this.three.sprites.default;
     
       })
       {
@@ -77,7 +78,7 @@ quickball="";
         obs.subscribe((four)=>{
           this.four=four;
           
-          this.pokeball=this.one.sprites.default;
+          this.pokeball=this.four.sprites.default;
       
         })
         {
@@ -85,7 +86,7 @@ quickball="";
           obs.subscribe((five)=>{
             this.five=five;
             
-            this.safariball=this.one.sprites.default;
+            this.safariball=this.five.sprites.default;
         
           })
           {
@@ -93,7 +94,7 @@ quickball="";
             obs.subscribe((six)=>{
               this.six=six;
               
-              this.netball=this.one.sprites.default;
+              this.netball=this.six.sprites.default;
           
             })
             {
@@ -101,7 +102,7 @@ quickball="";
               obs.subscribe((seven)=>{
                 this.seven=seven;
                 
-                this.diveball=this.one.sprites.default;
+                this.diveball=this.seven.sprites.default;
             
               })
               {
@@ -109,7 +110,7 @@ quickball="";
                 obs.subscribe((eight)=>{
                   this.eight=eight;
                   
-                  this.nestball=this.one.sprites.default;
+                  this.nestball=this.eight.sprites.default;
               
                 })
                 {
@@ -117,7 +118,7 @@ quickball="";
                   obs.subscribe((nine)=>{
                     this.nine=nine;
                     
-                    this.repeatball=this.one.sprites.default;
+                    this.repeatball=this.nine.sprites.default;
                 
                   })
                   {
@@ -125,7 +126,7 @@ quickball="";
                     obs.subscribe((ten)=>{
                       this.ten=ten;
                       
-                      this.timerball=this.one.sprites.default;
+                      this.timerball=this.ten.sprites.default;
                   
                     })
                     {
@@ -133,7 +134,7 @@ quickball="";
                       obs.subscribe((eleven)=>{
                         this.eleven=eleven;
                         
-                        this.luxuryball=this.one.sprites.default;
+                        this.luxuryball=this.eleven.sprites.default;
                     
                       })
                       {
@@ -141,7 +142,7 @@ quickball="";
                         obs.subscribe((twelve)=>{
                           this.twelve=twelve;
                           
-                          this.premierball=this.one.sprites.default;
+                          this.premierball=this.twelve.sprites.default;
                       
                         })
                         {
@@ -149,7 +150,7 @@ quickball="";
                           obs.subscribe((thirteen)=>{
                             this.thirteen=thirteen;
                             
-                            this.duskball=this.one.sprites.default;
+                            this.duskball=this.thirteen.sprites.default;
                         
                           })
                           {
@@ -157,7 +158,7 @@ quickball="";
                             obs.subscribe((fourteen)=>{
                               this.fourteen=fourteen;
                               
-                              this.healball=this.one.sprites.default;
+                              this.healball=this.fourteen.sprites.default;
                           
                             })
                             {
@@ -165,7 +166,7 @@ quickball="";
                               obs.subscribe((fithteen)=>{
                                 this.fithteen=fithteen;
                                 
-                                this.quickball=this.one.sprites.default;
+                                this.quickball=this.fithteen.sprites.default;
                             
                               })
                             }
@@ -185,3 +186,4 @@ quickball="";
 }
 }
 }
+
