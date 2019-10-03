@@ -69,6 +69,8 @@ import { PokeserviceService } from './services/pokeservice.service';
 import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up-pokemon.component';
 import { ItemsComponent } from './main/items/items.component';
 import { FlipToLoginService } from './services/flip-to-login.service';
+import { UpdateInfoComponent } from './main/profile/update-info/update-info.component';
+import { PokemonUpdateComponent } from './profile/pokemon-update/pokemon-update.component';
 
 
 
@@ -87,7 +89,9 @@ import { FlipToLoginService } from './services/flip-to-login.service';
     CatchEmAllComponent,
     TestsComponent,
     PopUpPokemonComponent,
-    ItemsComponent
+    ItemsComponent,
+    UpdateInfoComponent,
+    PokemonUpdateComponent
 
 
     

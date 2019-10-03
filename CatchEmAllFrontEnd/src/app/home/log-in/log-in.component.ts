@@ -52,18 +52,9 @@ export class LogInComponent implements OnInit {
         }
       }
     )
-
-    
-   
-    
-    
-    
   }
 
+ 
 
-
-}
-
-export function getInfo(){
 
 }

@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+    <ul class="nav justify-content-center">
+       <div class="card">
+         <br>
+         <div class="card-body">
+           <form>
+             
+            <div class="input-group form-group">
+               <input [(ngModel)]="tr.firstName" name ="tr.firstName" type="text" class="form-control" placeholder="First Name">
+               <input [(ngModel)]="tr.lastName" name = "tr.lastName" type="text" class="form-control" placeholder="Last Name">
+             </div>
+
+             <div class="input-group form-group">
+               <input [(ngModel)]="tr.password" name="tr.password" type="password" class="form-control" placeholder="password">
+             </div>
+             <div class="input-group form-group">
+               <input [(ngModel)]="confirm" name="confirm" type="password" class="form-control" placeholder="confirm-password">
+             </div>
+             <br>
+             
+             
+
+             
+           </form>
+         </div>
+         
+       </div>
+     </ul>
+   
+</div>
+<p style="text-align:center; color: gray ">
+   <button mat-button   (click)="updateInfo()">{{message}}</button>
+</p>
