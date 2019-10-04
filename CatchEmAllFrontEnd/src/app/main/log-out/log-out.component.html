@@ -1,17 +1,27 @@
 
 <br><br><br>
 <div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{tr.firstName}} </h5>
-          <h6 class="card-subtitle mb-2 text-muted">Are you sure you want to leave?</h6>
-          
-          <a (click)="cleanToken()" routerLink="/home">
-            <i class="material-icons">
-                meeting_room
-                </i>
-              Log Out</a>
-         
+  <div class="row">
+    <div class="col">
+      <div class="container">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{tr.firstName}} </h5>
+                <h6 class="card-subtitle mb-2 text-muted">Are you sure you want to leave?</h6>
+                
+                <a (click)="cleanToken()" routerLink="/home">
+                  <i class="material-icons">
+                      meeting_room
+                      </i>
+                    Log Out</a>
+              
+              </div>
+            </div>
+            
         </div>
-      </div>
+    </div>
+    <div class="col">
+      <img src="https://www.sccpre.cat/mypng/full/46-460888_pikachu-sad-png-pikachu-crying.png" alt="why">
+    </div>
+  </div>  
 </div>

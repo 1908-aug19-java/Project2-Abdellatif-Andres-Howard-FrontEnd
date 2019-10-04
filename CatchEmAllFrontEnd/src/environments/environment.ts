@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  trainerUrl: 'http://localhost:8081/users',
-  pokemonUrl: 'http://localhost:8081/pokemons',
-  login: 'http://localhost:8081/login'
+  trainerUrl: 'http://ec2-54-210-151-94.compute-1.amazonaws.com:8081/users',
+  pokemonUrl: 'http://ec2-54-210-151-94.compute-1.amazonaws.com:8081/pokemons',
+  login: 'http://ec2-54-210-151-94.compute-1.amazonaws.com:8081/login'
+
 
 };
 
