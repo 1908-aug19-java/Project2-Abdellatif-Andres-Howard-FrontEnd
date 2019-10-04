@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Trainer } from 'src/app/services/models/Trainer';
 import { TrainerPostService } from 'src/app/services/trainer/trainer-post.service';
-import { FlipToLoginService } from 'src/app/services/flip-to-login.service';
 import { TrainerGetService } from 'src/app/services/trainer/trainer-get.service';
+
+
 
 @Component({
   selector: 'app-update-info',

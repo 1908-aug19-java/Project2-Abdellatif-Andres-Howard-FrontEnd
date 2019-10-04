@@ -94,7 +94,7 @@ export class PopUpPokemonComponent implements OnInit {
       }
     );
     
-    //console.log(sessionStorage.getItem('trainerId'));
+   
   }
   
     catchPokemon(){

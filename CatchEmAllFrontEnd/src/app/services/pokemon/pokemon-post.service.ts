@@ -29,5 +29,18 @@ export class PokemonPostService {
     return this.http.post(this.url,payload,httpOptions);
   
   }
+  deletePokemon(pk: Pokemon): Observable<Object>{
+
+    const payload = JSON.stringify(pk);
+    console.log(payload);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.delete(this.url+"/"+pk.pokemonName);
+  
+  }
 }
 

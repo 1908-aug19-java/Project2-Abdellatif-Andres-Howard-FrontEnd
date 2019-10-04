@@ -5,6 +5,8 @@ import { TrainerGetService } from 'src/app/services/trainer/trainer-get.service'
 import { PokemonGetService } from 'src/app/services/pokemon/pokemon-get.service';
 import { Trainer } from 'src/app/services/models/Trainer';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material';
+import { PokemonUpdateComponent } from './pokemon-update/pokemon-update.component';
 
 
 
@@ -25,7 +27,8 @@ export class ProfileComponent implements OnInit {
     private http: HttpClient,
     private pkPostService: PokemonPostService,
     private trGetService: TrainerGetService,
-    private pkGetService: PokemonGetService) {  }
+    private pkGetService: PokemonGetService,
+    public dialog: MatDialog) {  }
 
   ngOnInit() {
     this.getTrainer();
@@ -54,14 +57,14 @@ export class ProfileComponent implements OnInit {
   }
 
   Response:any;
-  id="";
+  id:number;
   name=" Pokemon Name";
   type="Pokemon Type";
   move="Pokemon Move";
   nickName="Pokemon Nickname";
   url="https://icons-for-free.com/download-icon-go+moltros+play+pokeball+pokemon+icon-1320186972532359681_512.png";
   
-  search(pokemon:string,nickName:string){
+  search(pokemon:Pokemon,nickName:string){
 
     let obs =this.http.get('https://pokeapi.co/api/v2/pokemon/' + pokemon);
 
@@ -70,15 +73,33 @@ export class ProfileComponent implements OnInit {
       console.log(response);           
     })
     
-    this.id=this.Response.game_indices[0].game_index;
+
+    this.id=pokemon.pokemonId;
     this.name = this.Response.forms[0].name;
     this.type = this.Response.types[0].type.name;
     this.move = this.Response.moves[1].move.name;
     this.url = this.Response.sprites.front_default;
     this.nickName = nickName;
   }
+  openDialog(): void {    
+    const dialogRef = this.dialog.open(PokemonUpdateComponent, {
+      width: '400px',
+      data: {
+        id: this.id,
+        nickName: this.nickName,
+        name: this.name,
+        type: this.type,
+        move: this.move,
+        url: this.url
+        }
+    });
 
-
+    dialogRef.afterClosed().subscribe(result => {
+      this.getTrainer();
+      console.log('The dialog was closed');
+    });
+  }
+  
   getPokemonsTrainer(id:number){
     this.pkGetService.getPokemonsByUserId(id).subscribe(
       (allPokemons)=>{

@@ -1,3 +1,27 @@
-<p>
-  pokemon-update works!
-</p>
+<h1 mat-dialog-title>{{data.nickName}} </h1>
+ 
+<div mat-dialog-content class="animated fadeIn">
+    <div class="row">
+        <div class="col">
+            <img src="{{data.url}}" width="110%">
+        </div>
+        <div class="col" >
+            <span>
+                <kbd>Name: {{data.name}}</kbd><br>
+                <kbd>Type: {{data.type}}</kbd><br>
+                <kbd> Main Move: {{data.move}}</kbd>
+            </span>
+        </div>
+      </div>
+        
+        
+    
+        <mat-form-field >
+            <input matInput [(ngModel)]="this.nickName"  placeholder="Will have a nickname?">
+          </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button type="button" class="btn btn-success" (click)="onNoClick()">Rename</button>
+  <button type="button" class="btn btn-danger" (click)="catchPokemon()">Delete</button>
+</div>

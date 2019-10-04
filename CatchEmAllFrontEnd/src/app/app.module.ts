@@ -70,7 +70,7 @@ import { PopUpPokemonComponent } from './main/catch-em-all/pop-up-pokemon/pop-up
 import { ItemsComponent } from './main/items/items.component';
 import { FlipToLoginService } from './services/flip-to-login.service';
 import { UpdateInfoComponent } from './main/profile/update-info/update-info.component';
-import { PokemonUpdateComponent } from './profile/pokemon-update/pokemon-update.component';
+import { PokemonUpdateComponent } from './main/profile/pokemon-update/pokemon-update.component';
 
 
 
@@ -92,6 +92,7 @@ import { PokemonUpdateComponent } from './profile/pokemon-update/pokemon-update.
     ItemsComponent,
     UpdateInfoComponent,
     PokemonUpdateComponent
+    
 
 
     
@@ -151,6 +152,7 @@ import { PokemonUpdateComponent } from './profile/pokemon-update/pokemon-update.
 
   ],
   entryComponents:[
+    PokemonUpdateComponent,
     PopUpPokemonComponent
   ],
   providers: [
