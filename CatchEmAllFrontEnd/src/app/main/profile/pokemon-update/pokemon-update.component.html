@@ -17,11 +17,11 @@
         
     
         <mat-form-field >
-            <input matInput [(ngModel)]="this.nickName"  placeholder="Will have a nickname?">
+            <input matInput [(ngModel)]="this.newNickName"  placeholder="Will have a nickname?">
           </mat-form-field>
   
 </div>
 <div mat-dialog-actions>
-  <button type="button" class="btn btn-success" (click)="onNoClick()">Rename</button>
-  <button type="button" class="btn btn-danger" (click)="catchPokemon()">Delete</button>
+  <button type="button" class="btn btn-success" (click)="updatePokemons()">Rename</button>
+  <button type="button" class="btn btn-danger" (click)="deletePokemons()">Delete</button>
 </div>

@@ -66,8 +66,39 @@ export class PokemonUpdateComponent implements OnInit {
       }
     );
   }
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
+  newNickName="";
+  updatePokemons(){
+    this.pk.pokemonId=this.data.id;
+    this.pk.pokemonName=this.data.name;
+    this.pk.pokemonNickName=this.newNickName;
+    this.pk.type=this.data.type;
+    this.pk.userId=this.tr.trainerId;
+    this.pk.move=this.data.move;
+    
 
+    console.log(this.pk.userId)
+    this.pkPostService.savePokemon(this.pk).subscribe();
+    this.onNoClick();
+  }
+  deletePokemons(){
+    this.pk.pokemonId=this.data.id;
+    this.pk.pokemonName=this.data.name;
+    this.pk.pokemonNickName=this.newNickName;
+    this.pk.type=this.data.type;
+    this.pk.userId=this.tr.trainerId;
+    this.pk.move=this.data.move;
+    
+
+    console.log(this.pk.userId)
+    this.pkPostService.deletePokemon(this.pk).subscribe();
+    this.onNoClick();
+  }
+
+ 
  
 
 
