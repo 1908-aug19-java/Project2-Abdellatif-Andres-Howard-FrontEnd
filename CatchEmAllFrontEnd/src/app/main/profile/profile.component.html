@@ -27,7 +27,7 @@
         <img src="https://cdn.bulbagarden.net/upload/d/d3/Lets_Go_Pikachu_Eevee_Red.png" width="50%">
       </div>
       <div class="col">
-          <mat-tab-group  [selectedIndex]="position"  style="justify-content: center;" tretch-tabs class="log-in-sign-in">
+          <mat-tab-group  style="justify-content: center;" tretch-tabs class="log-in-sign-in">
             <mat-tab label="Your Info">
                 <table class="table table-hover" >
                     <tr><th>First Name:  </th><th>{{tr.firstName}} </th></tr>
@@ -37,7 +37,7 @@
                   </table>
 
             </mat-tab>  
-            <mat-tab (click)='getPokemonsTrainer()' class="pokemons"   label="Your Pokemons">
+            <mat-tab class="pokemons"   label="Your Pokemons">
                 <table class="table table-hover" *ngIf='pkns.length>0' >
                   <tr>
                     <th>Name</th>
